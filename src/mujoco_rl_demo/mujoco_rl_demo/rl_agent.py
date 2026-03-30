@@ -71,7 +71,7 @@ class InvertedPendulumTrainer:
         return env
 
     def train(self):
-        train_env = make_vec_env(self._make_train_env(), n_envs=self.n_envs)
+        train_env = make_vec_env(self._make_train_env(), n_envs=self.n_envs) # 使用 4 个环境并行采集经验
         eval_env = self._make_eval_env()
 
         eval_callback = EvalCallback(

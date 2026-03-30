@@ -10,10 +10,10 @@ def generate_launch_description():
 
     return LaunchDescription([
         Node(
-            package='mujoco_rl_demo',
-            executable='train_inverted_pendulum',
-            name='train_inverted_pendulum',
-            output='screen',
-            parameters=[config_file],
+            package='mujoco_rl_demo', # 包名
+            executable='train_inverted_pendulum', # 可执行文件名
+            name='train_inverted_pendulum',      # 节点名
+            output='screen',                     # 输出模式
+            parameters=[config_file],             # 配置文件路径
         )
     ])
