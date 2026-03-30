@@ -1,0 +1,24 @@
+# ROS2 编译文件
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+
+# 强化学习
+*.mp4
+videos/
+models/
+tensorboard/
+
+# 系统
+.DS_Store
+.vscode/
+.idea/

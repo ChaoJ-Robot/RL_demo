@@ -1,0 +1,22 @@
+train_inverted_pendulum:
+  ros__parameters:
+    env_id: "InvertedPendulum-v5"
+    total_timesteps: 100000
+    learning_rate: 0.0003
+    n_steps: 1024
+    batch_size: 256
+    n_epochs: 10
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.0
+    n_envs: 4
+    model_save_name: "ppo_inverted_pendulum"
+    use_tensorboard: true
+
+eval_inverted_pendulum:
+  ros__parameters:
+    env_id: "InvertedPendulum-v5"
+    model_path: "/home/jack/Desktop/jack_ws/RL_demo/install/mujoco_rl_demo/share/mujoco_rl_demo/models/ppo_inverted_pendulum.zip"
+    episodes: 3
+    render_mode: "human"
